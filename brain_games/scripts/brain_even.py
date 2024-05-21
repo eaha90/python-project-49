@@ -1,24 +1,36 @@
 import random
 
-print("Welcome to the Brain Games!")
-name = input("May I have your name? ")
-print(f"Hello, {name}!")
-print('Answer "yes" if the number is even, otherwise answer "no".')
+def play_even():
 
-correct_answers = 0
+  print("brain-even")
+  print("Welcome to the Brain Games!")
+  name = input("May I have your name? ")
+  print(f"Hello, {name}!")
+  print('Answer "yes" if the number is even, otherwise answer "no".')
 
-while correct_answers < 3:
+  correct_answers = 0
+  while correct_answers < 3:
     number = random.randint(1, 100)
     print(f"Question: {number}")
-    answer = input("Your answer: ")
+    answer = input("Your answer: ").lower()
 
-    if (number % 2 == 0 and answer == "yes") or (number % 2 != 0 and answer == "no"):
-        print("Correct!")
-        correct_answers += 1
+    if answer == "yes" and number % 2 == 0:
+      print("Correct!")
+      correct_answers += 1
+    elif answer == "no" and number % 2 != 0:
+      print("Correct!")
+      correct_answers += 1
     else:
-        correct_answer = 'yes' if number % 2 == 0 else 'no'
-        print(f"'{answer}' is wrong answer ;(. Correct answer was {correct_answer}.")
-        break
+      print(f"'{answer}' is wrong answer ;(.")
+      if number % 2 == 0:
+        print(f"Correct answer was 'yes'.")
+      else:
+        print(f"Correct answer was 'no'.")
+      print(f"Let's try again, {name}!")
+      break  # Завершаем игру после неправильного ответа
 
-if correct_answers == 3:
+  if correct_answers == 3:
     print(f"Congratulations, {name}!")
+
+if __name__ == "__main__":
+  play_even()
