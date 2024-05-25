@@ -6,7 +6,7 @@ print(f"Hello, {name}!")
 print('Answer "yes" if the number is even, otherwise answer "no".')
 
 
-def play_even():
+def main():
     correct_answers = 0
     while correct_answers < 3:
         number = random.randint(1, 100)
@@ -33,4 +33,4 @@ def play_even():
 
 
 if __name__ == "__main__":
-    play_even()
+    main()
