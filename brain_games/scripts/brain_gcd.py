@@ -40,7 +40,7 @@ def play_round(name):
         return False
 
 
-def play_gcd():
+def main():
     print("brain-gcd")
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
@@ -59,4 +59,4 @@ def play_gcd():
 
 
 if __name__ == "__main__":
-    play_gcd()
+    main()

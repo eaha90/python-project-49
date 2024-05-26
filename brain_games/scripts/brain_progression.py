@@ -7,7 +7,7 @@ def generate_progression(length, step):
     return progression
 
 
-def play_progression():
+def main():
     print("brain-progression")
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
@@ -45,4 +45,4 @@ def play_progression():
 
 
 if __name__ == "__main__":
-    play_progression()
+    main()

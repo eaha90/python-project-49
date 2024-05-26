@@ -10,7 +10,7 @@ def is_prime(n):
     return True
 
 
-def play_prime():
+def main():
     print("brain-prime")
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
@@ -43,4 +43,4 @@ def play_prime():
 
 
 if __name__ == "__main__":
-    play_prime()
+    main()
