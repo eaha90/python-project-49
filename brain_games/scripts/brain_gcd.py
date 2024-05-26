@@ -29,30 +29,33 @@ def check_answer(answer, num1, num2):
         return False
 
 
-def main(name):
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    print(f"Question: {num1} {num2}")
-    answer = get_user_answer()
-    if answer is not None:
-        return check_answer(answer, num1, num2)
+def play_round(name):
+    number1 = random.randint(1, 100)
+    number2 = random.randint(1, 100)
+    print(f"Question: {number1} {number2}")
+    answer = input("Your answer: ")
+    correct_answer = gcd(number1, number2)
+    if int(answer) == correct_answer:
+        print("Correct!")
+        return True
     else:
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
         return False
 
 
 def main():
-    print("brain-gcd")
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
+    name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print("Find the greatest common divisor of given numbers.")
-
     correct_answers = 0
     while correct_answers < 3:
         if play_round(name):
             correct_answers += 1
         else:
             print(f"Let's try again, {name}!")
+            break
+    if correct_answers == 3:
+        print(f"Congratulations, {name}!")
 
     if correct_answers == 3:
         print(f"Congratulations, {name}!")
