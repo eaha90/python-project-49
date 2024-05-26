@@ -31,7 +31,8 @@ def play_game(name):
         if answer == correct_answer:
             print("Correct!")
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
     print(f"Congratulations, {name}!")
@@ -41,5 +42,6 @@ def main():
     name = get_user_name()
     play_game(name)
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
