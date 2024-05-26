@@ -39,6 +39,7 @@ def main():
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{hidden_value}'.")
             print(f"Let's try again, {name}!")
+            return
 
     if correct_answers == 3:
         print(f"Congratulations, {name}!")
