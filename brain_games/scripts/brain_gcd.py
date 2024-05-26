@@ -1,53 +1,47 @@
 import random
-from prompt_toolkit import prompt # type: ignore
 
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
 
-def get_user_answer():
-    while True:
-        answer = input("Your answer: ")
-        try:
-            answer = int(answer)
-            if answer <= 0:
-                print("Please enter a positive integer.")
-            else:
-                return answer
-        except ValueError:
-            print("Please enter a valid integer.")
+def get_user_name():
+    print("Welcome to the Brain Games!")
+    name = input("May I have your name? ")
+    print(f"Hello, {name}!")
+    return name
 
-def check_answer(answer, num1, num2):
-    if answer == gcd(num1, num2):
+
+def generate_numbers():
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    return num1, num2
+
+
+def find_gcd(num1, num2):
+    while num2:
+        num1, num2 = num2, num1 % num2
+    return num1
+
+
+def play_game(name):
+    print("Find the greatest common divisor of given numbers.")
+    rounds = 3
+    for _ in range(rounds):
+        num1, num2 = generate_numbers()
+        print(f"Question: {num1} {num2}")
+    answer = int(input("Your answer: "))
+    correct_answer = find_gcd(num1, num2)
+    if answer == correct_answer:
         print("Correct!")
-        return True
     else:
-        print(f"'{answer}' is wrong answer ;(. Correct answer was '{gcd(num1, num2)}'.")
-        return False
+        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+        print(f"Let's try again, {name}!")
+        return
 
-def play_round(name):
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
-    print(f"Question: {number1} {number2}")
-    answer = get_user_answer()
-    if answer is None:
-        return False
-    return check_answer(answer, number1, number2)
+    print(f"Congratulations, {name}!")
+
 
 def main():
-    name = prompt("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("Find the greatest common divisor of given numbers.")
-    correct_answers = 0
-    while correct_answers < 3:
-        if play_round(name):
-            correct_answers += 1
-        else:
-            print(f"Let's try again, {name}!")
-            break
-    if correct_answers == 3:
-        print(f"Congratulations, {name}!")
+    name = get_user_name()
+    play_game(name)
+
 
 if __name__ == "__main__":
     main()
