@@ -1,5 +1,5 @@
 import random
-from prompt_toolkit import prompt
+from prompt_toolkit import prompt # type: ignore
 
 def gcd(a, b):
     while b:
