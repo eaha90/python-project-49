@@ -29,7 +29,7 @@ def check_answer(answer, num1, num2):
         return False
 
 
-def play_round(name):
+def main(name):
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
     print(f"Question: {num1} {num2}")
