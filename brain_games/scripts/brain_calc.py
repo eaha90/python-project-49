@@ -18,7 +18,7 @@ def generate_question():
     return question, correct_answer
 
 
-def play_calculator():
+def main():
     name = welcome_user()
     print("What is the result of the expression?")
 
@@ -43,4 +43,4 @@ def play_calculator():
 
 
 if __name__ == "__main__":
-    play_calculator()
+    main()
