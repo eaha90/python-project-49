@@ -8,14 +8,13 @@ def welcome_user():
 def launch_game(game_module):
     name = welcome_user()
     print(game_module.GAME_DESCRIPTION)
-
     correct_answers_count = 0
     rounds_to_win = 3
 
     while correct_answers_count < rounds_to_win:
+        user_answer = input("Your answer: ")
         question, correct_answer = game_module.generate_question()
         print(f"Question: {question}")
-        user_answer = input("Your answer: ")
 
         if user_answer == correct_answer:
             print("Correct!")
