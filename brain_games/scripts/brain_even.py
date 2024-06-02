@@ -5,7 +5,6 @@ from brain_games.scripts.game_engine import launch_game
 
 
 def main():
-
     launch_game(even)
 
 
