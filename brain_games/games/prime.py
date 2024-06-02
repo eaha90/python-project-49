@@ -1,49 +1,21 @@
-#!/usr/bin/env python3
-
 import random
 
-
-def welcome_user():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    return name
+GAME_DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'."  # Описание игры
 
 
 def generate_question():
-    operations = ['+', '-', '*']
-    num1 = random.randint(1, 50)
-    num2 = random.randint(1, 20)
-    operation = random.choice(operations)
-    question = f"{num1} {operation} {num2}"
-    correct_answer = str(eval(question))
+
+    number = random.randint(1, 100)
+    question = str(number)
+    correct_answer = "yes" if is_prime(number) else "no"
     return question, correct_answer
 
 
-def main():
-    name = welcome_user()
-    print("What is the result of the expression?")
+def is_prime(n):
 
-    correct_answers_count = 0
-    rounds_to_win = 3
-
-    while correct_answers_count < rounds_to_win:
-        question, correct_answer = generate_question()
-        print(f"Question: {question}")
-        user_answer = input("Your answer: ")
-
-        if user_answer == correct_answer:
-            print("Correct!")
-            correct_answers_count += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            break
-
-    if correct_answers_count == rounds_to_win:
-        print(f"Congratulations, {name}!")
-
-
-if __name__ == "__main__":
-    main()
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
