@@ -1,5 +1,5 @@
-from brain_games.games import even # type: ignore
-from brain_games.scripts.game_engine import launch_game # type: ignore
+from brain_games.games import even
+from brain_games.scripts.game_engine import launch_game
 
 
 def welcome_user():
@@ -11,12 +11,12 @@ def welcome_user():
 
 def main():
     name = welcome_user()
-    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
-
     rounds_to_win = 3
     correct_answers_count = 0
 
     while correct_answers_count < rounds_to_win:
+        print("Answer 'yes' if the number is even, otherwise answer 'no'.")
+
         question, correct_answer = even.generate_question()
         print(f"Question: {question}")
 
@@ -33,6 +33,7 @@ def main():
 
     if correct_answers_count == rounds_to_win:
         print(f"Congratulations, {name}!")
+
 
 if __name__ == "__main__":
     main()
