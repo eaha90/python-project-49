@@ -1,8 +1,5 @@
-from brain_games.games.even import welcome_user
-
-
 def launch_game(game_module):
-    name = welcome_user()
+    name = game_module.welcome_user()
     print(game_module.GAME_DESCRIPTION)
 
     correct_answers_count = 0
