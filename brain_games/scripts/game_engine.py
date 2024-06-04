@@ -1,8 +1,4 @@
-def welcome_user():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    return name
+from brain_games.games.even import welcome_user
 
 
 def launch_game(game_module):
