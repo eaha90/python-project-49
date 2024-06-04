@@ -1,6 +1,6 @@
 import random
 
-GAME_DESCRIPTION = "What is the result of the expression?"  # Описание игры
+GAME_DESCRIPTION = "What is the result of the expression?"
 
 
 def generate_question():

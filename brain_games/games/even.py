@@ -1,6 +1,7 @@
 import random
 
-GAME_DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'."  # Описание игры
+GAME_DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'."
+
 
 def generate_question():
     number = random.randint(1, 100)

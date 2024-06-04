@@ -1,6 +1,6 @@
 import random
 
-GAME_DESCRIPTION = "Find the greatest common divisor of given numbers."  # Описание игры
+GAME_DESCRIPTION = "Find the greatest common divisor of given numbers."
 
 
 def generate_question():
