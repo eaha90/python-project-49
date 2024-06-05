@@ -7,5 +7,5 @@ from brain_games.scripts.game_engine import launch_game
 def main():
     launch_game(gcd)
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
