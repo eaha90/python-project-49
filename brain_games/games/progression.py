@@ -1,23 +1,15 @@
-from random import randint
+import random
 
 GAME_DESCRIPTION = 'What number is missing in this progression?'
 
 
-def welcome_user():
-
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    return name
-
-
 def generate_question():
-
-    start = randint(1, 10)
-    step = randint(1, 10)
-    progression_length = randint(5, 11)
-    hidden_index = randint(0, progression_length - 1)
+    start = random.randint(1, 10)
+    step = random.randint(1, 10)
+    progression_length = random.randint(5, 11)
     progression = [start + i * step for i in range(progression_length)]
-    progression[hidden_index] = ".."
-    correct_answer = str(start + hidden_index * step)
-    return " ".join(str(x) for x in progression), correct_answer
+    hidden_index = random.randint(0, progression_length - 1)
+    correct_answer = str(progression[hidden_index])
+    progression[hidden_index] = '..'
+    question = f"Question: {' '.join(str(item) for item in progression)}"
+    return question, correct_answer
