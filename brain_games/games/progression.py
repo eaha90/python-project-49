@@ -14,6 +14,6 @@ def generate_question():
     question = f"Question: {' '.join(str(item) for item in progression)}"
     return question, correct_answer
 
-ы
+
 def get_user_answer():
     return input("Your answer: ")
