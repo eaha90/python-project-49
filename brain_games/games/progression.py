@@ -3,7 +3,6 @@ import prompt
 
 GAME_DESCRIPTION = 'Brain Progression'
 
-
 def generate_question():
     start = random.randint(1, 10)
     step = random.randint(1, 10)
@@ -12,5 +11,5 @@ def generate_question():
     hidden_index = random.randint(0, progression_length - 1)
     correct_answer = str(progression[hidden_index])
     progression[hidden_index] = '..'
-    question = f"Question: {' '.join(str(item) for item in progression)}"
+    question = f"{' '.join(str(item) for item in progression)}"
     return question, correct_answer
