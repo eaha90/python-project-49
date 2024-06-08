@@ -12,9 +12,11 @@ def generate_question():
     hidden_index = random.randint(0, progression_length - 1)
     correct_answer = str(progression[hidden_index])
     progression[hidden_index] = '..'
-    question = ' '.join(str(item) for item in progression)
+
+    question = f"Question: {' '.join(str(item) for item in progression)}"
+
     return question, correct_answer
 
 
 def get_user_answer():
-    return input("Your answer: ")
+    input("Your answer: ")
