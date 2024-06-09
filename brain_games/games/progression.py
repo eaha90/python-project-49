@@ -1,6 +1,5 @@
 import random
-
-GAME_DESCRIPTION = 'What number is missing in this progression?'
+import prompt
 
 
 def generate_question():
