@@ -14,3 +14,6 @@ def generate_question():
     progression[hidden_index] = '..'
     question = f"Question: {' '.join(str(item) for item in progression)}"
     return question, correct_answer
+
+if __name__ == "__main__":
+    print(GAME_DESCRIPTION)

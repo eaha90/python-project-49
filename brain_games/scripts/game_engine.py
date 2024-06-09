@@ -4,21 +4,17 @@ import prompt
 
 
 def launch_game(game_module):
-
     print(game_module.GAME_DESCRIPTION)
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
 
     correct_answers_count = 0
-
     rounds_to_win = 3
 
     while correct_answers_count < rounds_to_win:
         question, correct_answer = game_module.generate_question()
-
         print(f"Question: {question}")
-
         user_answer = prompt.string("Your answer: ")
 
         if user_answer == correct_answer:
@@ -42,7 +38,6 @@ def main():
     args = parser.parse_args()
 
     game_module = importlib.import_module(f"brain_games.games.{args.game}")
-
     launch_game(game_module)
 
 

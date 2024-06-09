@@ -8,8 +8,10 @@ def main():
     print(progression.GAME_DESCRIPTION)
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
+    try:
+        launch_game(progression)
+    except Exception as e:
+        print(f"Error: {e}")
 
-    launch_game(progression)
-
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
