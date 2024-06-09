@@ -8,7 +8,6 @@ def main():
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
     question, correct_answer = progression.generate_question()
-    print(question)
     try:
         launch_game(progression)
     except Exception as e:
