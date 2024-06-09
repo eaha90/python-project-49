@@ -1,5 +1,4 @@
 import random
-import prompt 
 
 GAME_DESCRIPTION = 'What number is missing in this progression?'
 
@@ -12,8 +11,5 @@ def generate_question():
     hidden_index = random.randint(0, progression_length - 1)
     correct_answer = str(progression[hidden_index])
     progression[hidden_index] = '..'
-    question = f"Question: {' '.join(str(item) for item in progression)}"
+    question = ' '.join(str(item) for item in progression)
     return question, correct_answer
-
-if __name__ == "__main__":
-    print(GAME_DESCRIPTION)
