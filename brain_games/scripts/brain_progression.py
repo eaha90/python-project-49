@@ -3,9 +3,7 @@
 from brain_games.games import progression
 from brain_games.scripts.game_engine import launch_game
 
-
 def main():
-    print(progression.GAME_DESCRIPTION)
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
 
