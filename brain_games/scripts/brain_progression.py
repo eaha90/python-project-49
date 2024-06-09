@@ -6,7 +6,6 @@ from brain_games.scripts.game_engine import launch_game
 
 def main():
     question, correct_answer = progression.generate_question()
-    print(question)
 
     # name = input("May I have your name? ")
     # print(f"Hello, {name}!")
