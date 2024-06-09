@@ -4,6 +4,7 @@ import prompt
 
 
 def launch_game(game_module):
+
     print(game_module.GAME_DESCRIPTION)
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
