@@ -1,16 +1,23 @@
-import random
+from random import randint
+import math
 
 GAME_DESCRIPTION = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 
 
-def generate_question():
-    number = random.randint(1, 100)
-    is_prime = True
+def is_prime(num):
+    mx = math.sqrt(num)
 
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-            break
+    i = 2
+    while i <= mx:
+        if num % i == 0:
+            return False
+        else:
+            i += 1
+    return True
 
-    correct_answer = 'yes' if is_prime else 'no'
-    return str(number), correct_answer
+
+def run_game():
+    question = randint(0, 100)
+    prime = 'yes' if is_prime(question) else 'no'
+
+    return (question, prime)

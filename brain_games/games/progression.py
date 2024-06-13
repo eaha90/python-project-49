@@ -1,15 +1,25 @@
-import random
+from random import randint
 
 GAME_DESCRIPTION = 'What number is missing in this progression?'
 
 
-def generate_question():
-    start = random.randint(1, 10)
-    step = random.randint(1, 10)
-    progression_length = random.randint(5, 15)
-    progression = [start + i * step for i in range(progression_length)]
-    hidden_index = random.randint(0, progression_length - 1)
-    correct_answer = str(progression[hidden_index])
-    progression[hidden_index] = '..'
-    question = ' '.join(str(item) for item in progression)
-    return question, correct_answer
+def generate_progression():
+    step = randint(1, 10)
+    start = randint(1, 100)
+    stop = start + (step * 10)
+
+    progression = [str(x) for x in range(start, stop, step)]
+
+    return progression
+
+
+def run_game():
+    progression = generate_progression()
+
+    skip = randint(0, 9)
+    correct = progression[skip]
+
+    progression[skip] = ".."
+    question = " ".join(progression)
+
+    return (question, correct)

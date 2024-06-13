@@ -1,45 +1,27 @@
-import argparse
-import importlib
-import prompt
+from brain_games.cli import run, get_answer
+
+MAX_SCORE = 3
 
 
-def launch_game(game_module):
-    print("Welcome to the Brain Games!")
-    print(game_module.GAME_DESCRIPTION)
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
+def game_run(game):
+    player_name = run(game.RULES)
 
-    correct_answers_count = 0
-    rounds_to_win = 3
+    score = 0
 
-    while correct_answers_count < rounds_to_win:
-        question, correct_answer = game_module.generate_question()
-        print(f"Question: {question}")
-        user_answer = prompt.string("Your answer: ")
+    while score < MAX_SCORE:
 
-        if user_answer == correct_answer:
-            print("Correct!")
-            correct_answers_count += 1
-        else:
+        question, correct = game.run_game()
+
+        answer = get_answer(question)
+
+        if answer != correct:
             print(
-                f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'"
+                f"'{answer}' is wrong answer ;(.",
+                f"Correct answer was '{correct}'.",
             )
-            print(f"Let's try again, {name}!")
-            break
+            print(f"Let's try again, {player_name}!")
+            return
+        print("Correct")
+        score += 1
 
-    if correct_answers_count == rounds_to_win:
-        print(f"Congratulations, {name}!")
-
-
-def main():
-    parser = argparse.ArgumentParser(description='Play Brain Games!')
-    parser.add_argument('game', choices=['calc', 'even', 'gcd', 'prime', 'progression'],
-                        help='Name of the game to play.')
-    args = parser.parse_args()
-
-    game_module = importlib.import_module(f"brain_games.games.{args.game}")
-    launch_game(game_module)
-
-
-if __name__ == '__main__':
-    main()
+    print(f"Congratulations, {player_name}!")

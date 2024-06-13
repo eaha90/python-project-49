@@ -1,14 +1,31 @@
-import random
+from random import randint
 
 GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def generate_question():
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
-    gcd = 1
-    for i in range(1, min(number1, number2) + 1):
-        if number1 % i == 0 and number2 % i == 0:
-            gcd = i
+def get_gcd(a, b):
+    if a == b:
+        return a
+    if a < b:
+        b, a = a, b
 
-    return f"{number1} {number2}", str(gcd)
+    remainder = a % b
+
+    if remainder == 0:
+        return b
+
+    while remainder != 0:
+        remainder = a % b
+        a, b = b, remainder
+    return a
+
+
+def run_game():
+    a = randint(1, 100)
+    b = randint(1, 100)
+
+    question = f"{a} {b}"
+
+    correct = get_gcd(a, b)
+
+    return (question, str(correct))

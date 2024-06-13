@@ -1,21 +1,18 @@
-import random
+from random import randint, choice
+from operator import add, sub, mul
 
-GAME_DESCRIPTION = 'What is the result of the expression?'
+RULES = "What is the result of the expression?"
+OPERATIONS = [("+", add), ("-", sub), ("*", mul)]
 
 
-def generate_question():
-    operand1 = random.randint(1, 100)
-    operand2 = random.randint(1, 100)
-    operator = random.randint(1, 3)
+def run_game():
+    a = randint(1, 100)
+    b = randint(1, 100)
 
-    if operator == 1:
-        expression = f"{operand1} + {operand2}"
-        correct_answer = str(operand1 + operand2)
-    elif operator == 2:
-        expression = f"{operand1} - {operand2}"
-        correct_answer = str(operand1 - operand2)
-    else:
-        expression = f"{operand1} * {operand2}"
-        correct_answer = str(operand1 * operand2)
+    operator, func = choice(OPERATIONS)
 
-    return expression, correct_answer
+    question = f"{a} {operator} {b}"
+
+    correct = func(a, b)
+
+    return (question, str(correct))
