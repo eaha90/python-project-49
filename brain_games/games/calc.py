@@ -1,7 +1,7 @@
 from random import randint, choice
 from operator import add, sub, mul
 
-RULES = "What is the result of the expression?"
+GAME_DESCRIPTION = "What is the result of the expression?"
 OPERATIONS = [("+", add), ("-", sub), ("*", mul)]
 
 
