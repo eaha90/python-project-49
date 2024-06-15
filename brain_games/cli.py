@@ -1,4 +1,4 @@
-def run(GDESCRIPTION):
+def run(DESCRIPTION):
     print("Welcome to the Brain Games!")
     print(DESCRIPTION)
     player_name = input("May I have your name? ")
