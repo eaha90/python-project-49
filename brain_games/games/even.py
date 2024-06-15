@@ -1,6 +1,6 @@
 from random import randint
 
-GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def run_game():

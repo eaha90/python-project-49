@@ -2,11 +2,9 @@
 
 from brain_games.cli import run
 
-GAME_DESCRIPTION = "Welcome to the Brain Games!"
-
 
 def main():
-    run(GAME_DESCRIPTION)
+    run()
 
 
 if __name__ == "__main__":

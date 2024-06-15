@@ -1,6 +1,6 @@
-def run(GAME_DESCRIPTION):
+def run(GDESCRIPTION):
     print("Welcome to the Brain Games!")
-    print(GAME_DESCRIPTION)
+    print(DESCRIPTION)
     player_name = input("May I have your name? ")
     print(f"Hello, {player_name}!")
     return player_name

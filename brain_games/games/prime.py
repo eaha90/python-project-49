@@ -1,7 +1,7 @@
 from random import randint
 import math
 
-GAME_DESCRIPTION = 'Answer "yes" if the number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 
 
 def is_prime(num):
