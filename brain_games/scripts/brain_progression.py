@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from game_engine import game_run
+from brain_games.game_engine import game_run
 from brain_games.games import progression
 
 
