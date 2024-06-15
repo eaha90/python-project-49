@@ -2,6 +2,7 @@
 
 from brain_games.cli import run
 
+DESCRIPTION = run
 
 def main():
     run(DESCRIPTION)
