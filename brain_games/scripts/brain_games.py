@@ -4,7 +4,7 @@ from brain_games.cli import run
 
 
 def main():
-    run()
+    run(GAME_DESCRIPTION)
 
 
 if __name__ == "__main__":
