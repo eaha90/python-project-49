@@ -4,7 +4,7 @@ MAX_SCORE = 3
 
 
 def game_run(game):
-    player_name = run(game.GAME_DESCRIPTION)
+    player_name = run(game.DESCRIPTION)
 
     score = 0
 
