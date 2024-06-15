@@ -1,17 +1,12 @@
-import prompt
-
-
-def run(game_intro=""):
+def run(GAME_DESCRIPTION):
     print("Welcome to the Brain Games!")
-    if game_intro:
-        print(f"{game_intro}")
-    print()
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    return name
+    print(GAME_DESCRIPTION)
+    player_name = input("May I have your name? ")
+    print(f"Hello, {player_name}!")
+    return player_name
 
 
 def get_answer(question):
     print(f"Question: {question}")
-    answer = prompt.string("Your answer: ")
+    answer = input("Your answer: ")
     return answer
