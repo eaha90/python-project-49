@@ -1,27 +1,22 @@
-from brain_games.cli import run, get_answer
+import prompt
 
-MAX_SCORE = 3
+ROUNDS = 3
 
 
-def game_run(game):
-    player_name = run(game.DESCRIPTION)
-
-    score = 0
-
-    while score < MAX_SCORE:
-
-        question, correct = game.run_game()
-
-        answer = get_answer(question)
-
-        if answer != correct:
-            print(
-                f"'{answer}' is wrong answer ;(.",
-                f"Correct answer was '{correct}'.",
-            )
-            print(f"Let's try again, {player_name}!")
+def run(game):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print(game.TASK)
+    for _ in range(ROUNDS):
+        question, correct_answer = game.get_question_and_answer()
+        print(f'Question: {question}')
+        user_answer = prompt.string('Your answer: ')
+        if user_answer == correct_answer:
+            print('Correct!')
+        else:
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f" Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}!")
             return
-        print("Correct")
-        score += 1
-
-    print(f"Congratulations, {player_name}!")
+    print(f'Congratulations, {name}!')

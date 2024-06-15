@@ -1,14 +1,13 @@
-from random import randint
+import random
 
 DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
-def run_game():
-    question = randint(1, 100)
+def is_even(number):
+    return False if number % 2 else True
 
-    if question % 2 == 0:
-        is_even = "yes"
-    else:
-        is_even = "no"
 
-    return (question, is_even)
+def get_question_and_answer():
+    number = random.randint(1, 100)
+    answer = "yes" if is_even(number) else "no"
+    return str(number), answer

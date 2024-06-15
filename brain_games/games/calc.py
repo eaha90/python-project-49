@@ -1,18 +1,18 @@
-from random import randint, choice
-from operator import add, sub, mul
-
-DESCRIPTION = "What is the result of the expression?"
-OPERATIONS = [("+", add), ("-", sub), ("*", mul)]
+import random
 
 
-def run_game():
-    a = randint(1, 100)
-    b = randint(1, 100)
+DESCRIPTION = 'What is the result of the expression?.'
 
-    operator, func = choice(OPERATIONS)
 
-    question = f"{a} {operator} {b}"
-
-    correct = func(a, b)
-
-    return (question, str(correct))
+def get_question_and_answer():
+    first = random.randint(1, 100)
+    second = random.randint(1, 100)
+    operation = random.choices("+-*")
+    if operation[0] == "+":
+        correct_answer = first + second
+    if operation[0] == "-":
+        correct_answer = first - second
+    if operation[0] == "*":
+        correct_answer = first * second
+    question = f"{first} {operation[0]} {second}"
+    return question, str(correct_answer)
