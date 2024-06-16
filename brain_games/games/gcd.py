@@ -12,9 +12,9 @@ def gcd(a, b):
 
 
 def generate_gcd_problem():
-
+ 
     random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     result = gcd(random_int_1, random_int_2)
-    question = f"Найдите НОД чисел {random_int_1} и {random_int_2}:"
+    question = f"Question: {random_int_1} {random_int_2}"
     return question, result
