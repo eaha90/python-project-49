@@ -1,18 +1,14 @@
 import random
 
 
-DESCRIPTION = 'What is the result of the expression?.'
+MIN_NUMBER = 1
+MAX_NUMBER = 10
 
 
-def get_question_and_answer():
-    first = random.randint(1, 100)
-    second = random.randint(1, 100)
-    operation = random.choices("+-*")
-    if operation[0] == "+":
-        correct_answer = first + second
-    if operation[0] == "-":
-        correct_answer = first - second
-    if operation[0] == "*":
-        correct_answer = first * second
-    question = f"{first} {operation[0]} {second}"
-    return question, str(correct_answer)
+def calc():
+    random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    action = random.choice(['*', '+', '-'])
+    operation = ' '.join((str(random_int_1), action, str(random_int_2)))
+    result = int(eval(operation))
+    return operation, result

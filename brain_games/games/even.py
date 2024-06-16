@@ -1,13 +1,11 @@
 import random
 
-DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
+
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
-def is_even(number):
-    return False if number % 2 else True
-
-
-def get_question_and_answer():
-    number = random.randint(1, 100)
-    answer = "yes" if is_even(number) else "no"
-    return str(number), answer
+def even():
+    random_int = random.randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = 'yes' if random_int % 2 == 0 else 'no'
+    return random_int, correct_answer

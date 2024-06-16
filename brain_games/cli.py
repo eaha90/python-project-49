@@ -1,5 +1,8 @@
-def print_rules(rules_text):
+import prompt
 
-    print("Welcome to the Brain Games!")
-    print(f"May I have your name? Hello, {get_user_name()}!")
-    print(rules_text)
+
+def welcome_user():
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}')
+    return name

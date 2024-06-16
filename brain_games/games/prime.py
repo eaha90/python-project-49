@@ -1,21 +1,20 @@
 import random
 
 
-DESCRIPTION = 'Answer "yes" if the number is prime. Otherwise answer "no".'
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
-def get_question_and_answer():
-    number = random.randint(1, 100)
-
-
-    def is_prime(number):
-        if number == 1:
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
             return False
-        root = int(number ** 0.5)
-        possible_deviders = list(range(2, root + 1))
-        for n in possible_deviders:
-            if number % n == 0:
-                return False
-        return True
-    answer = "yes" if is_prime(number) else "no"
-    return str(number), answer
+    return True
+
+
+def prime():
+    random_int = random.randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = 'yes' if is_prime(random_int) else 'no'
+    return random_int, correct_answer

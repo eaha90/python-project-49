@@ -1,12 +1,19 @@
 import random
-import math
-
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def get_question_and_answer():
-    first_number = random.randint(1, 100)
-    second_number = random.randint(1, 100)
-    question = f"{first_number} {second_number}"
-    answer = str(math.gcd(first_number, second_number))
-    return question, answer
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def gcd():
+    random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    result = gcd(random_int_1, random_int_2)
+    question = f"{random_int_1} {random_int_2}"
+    return question, result

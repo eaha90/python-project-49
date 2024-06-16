@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
+from brain_games.games.even_game import even_game
+from brain_games.engine import run_game
 
-from brain_games.cli import print_rules
-from brain_games.games import even
+
+QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def main():
-    print_rules(even.RULES)
+    run_game(even_game, QUESTION)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

@@ -1,22 +1,26 @@
+# brain_games/engine.py
+
 import prompt
+from brain_games.scripts.hooray import hooray
+from brain_games.cli import welcome_user
 
-ROUNDS = 3
 
+def run_game(game, question):
+    name = welcome_user()
+    print(question)
+    count = 0
+    MAX_ROUNDS = 3
 
-def run(game):
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print(game.DESCRIPTION)
-    for _ in range(ROUNDS):
-        question, correct_answer = game.get_question_and_answer()
+    while count < MAX_ROUNDS:
+        question, correct_answer = game()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
-        if user_answer == correct_answer:
+        if str(user_answer) == str(correct_answer):
             print('Correct!')
+            count += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(."
-                  f" Correct answer was '{correct_answer}'.")
+            print(f"'{user_answer}' is wrong answer ;( "
+                  + f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
-    print(f'Congratulations, {name}!')
+    hooray(count, MAX_ROUNDS, name)
