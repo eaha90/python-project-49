@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.engine import run
+
+from brain_games.cli import print_rules
 from brain_games.games import even
 
 
 def main():
-    run(even)
+    print_rules(even.RULES)
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
