@@ -23,8 +23,6 @@
     3. make brain-gcd - Определение наибольшего общего делителя
     4. make brain-progression - Прогрессия
     5. make brain-prime - Определение простого числа
-  
-    asciinema rec demo.cast --overwrite
 
 Демо игр:
         
