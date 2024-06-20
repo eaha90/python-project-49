@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.games.game_prime import game_prime
-from brain_games.engine import run_game
-
-
-QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+from brain_games.engine import run_game, QUESTION
 
 
 def main():
