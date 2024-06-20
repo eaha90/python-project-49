@@ -1,7 +1,6 @@
 # brain_games/engine.py
 
 import prompt
-from brain_games.scripts.hooray import hooray
 from brain_games.cli import welcome_user
 
 
@@ -23,4 +22,5 @@ def run_game(game, question):
                   + f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
-    hooray(count, MAX_ROUNDS, name)
+    if count == MAX_ROUNDS:
+        print(f'Congratulations, {name}!')
