@@ -2,7 +2,24 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def run_game(game, question):
+from brain_games.games.game_calc import game_calc, QUESTION as CALC_QUESTION
+from brain_games.games.game_even import game_even, QUESTION as EVEN_QUESTION
+from brain_games.games.game_gcd import game_gcd, QUESTION as GCD_QUESTION
+from brain_games.games.game_prime import game_prime, QUESTION as PRIME_QUESTION
+from brain_games.games.game_progression import game_progression, QUESTION as PROGRESSION_QUESTION
+
+
+GAMES = {
+    'calc': (game_calc, CALC_QUESTION),
+    'even': (game_even, EVEN_QUESTION),
+    'gcd': (game_gcd, GCD_QUESTION),
+    'prime': (game_prime, PRIME_QUESTION),
+    'progression': (game_progression, PROGRESSION_QUESTION),
+}
+
+
+def run_game(game_name):
+    game, question = GAMES[game_name]
     name = welcome_user()
     print(question)
     count = 0
