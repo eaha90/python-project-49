@@ -1,22 +1,14 @@
 import random
-
-MIN_NUMBER = 1
-MAX_NUMBER = 10
+import operator
 
 QUESTION = 'What is the result of the expression?'
 
 
-def game_calc():
-    random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    action = random.choice(['*', '+', '-'])
-
-    if action == '+':
-        result = random_int_1 + random_int_2
-    elif action == '-':
-        result = random_int_1 - random_int_2
-    elif action == '*':
-        result = random_int_1 * random_int_2
-
-    operation = f'{random_int_1} {action} {random_int_2}'
-    return operation, str(result)
+def game():
+    operations = {'+': operator.add, '-': operator.sub, '*': operator.mul}
+    number1 = random.randint(1, 10)
+    number2 = random.randint(1, 10)
+    operation = random.choice(list(operations.keys()))
+    question = f'{number1} {operation} {number2}'
+    correct_answer = str(operations[operation](number1, number2))    
+    return question, correct_answer
