@@ -19,7 +19,7 @@ def generate_progression():
     result = progression[gap_index]
     progression[gap_index] = ".."
     progression_str = ' '.join(str(x) for x in progression)
-    return progression_str, result
+    return progression_str, str(result)
 
 
 def game_progression():

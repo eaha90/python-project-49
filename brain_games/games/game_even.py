@@ -6,7 +6,8 @@ MAX_NUMBER = 100
 QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def game_even():
+def game():
     random_int = random.randint(MIN_NUMBER, MAX_NUMBER)
+    question = f'{random_int}'
     correct_answer = 'yes' if random_int % 2 == 0 else 'no'
-    return random_int, correct_answer
+    return question, correct_answer

@@ -17,4 +17,4 @@ def game_gcd():
     random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     result = gcd(random_int_1, random_int_2)
     question = f"{random_int_1} {random_int_2}"
-    return question, result
+    return question, str(result)

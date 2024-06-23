@@ -19,4 +19,4 @@ def game_calc():
         result = random_int_1 * random_int_2
 
     operation = f'{random_int_1} {action} {random_int_2}'
-    return operation, result
+    return operation, str(result)
