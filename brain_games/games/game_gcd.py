@@ -4,6 +4,8 @@ import random
 MIN_NUMBER = 1
 MAX_NUMBER = 100
 
+QUESTION = 'Find the greatest common divisor of given numbers.'
+
 
 def gcd(a, b):
     while b:

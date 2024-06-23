@@ -4,6 +4,8 @@ import random
 MIN_NUMBER = 1
 MAX_NUMBER = 10
 
+QUESTION = 'What is the result of the expression?'
+
 
 def game_calc():
     random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
