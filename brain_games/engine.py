@@ -4,7 +4,6 @@ from brain_games.cli import welcome_user
 
 def run_game(game_module):
     name = welcome_user()
-    print(game_module.QUESTION)
     count = 0
     MAX_ROUNDS = 3
 
