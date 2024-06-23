@@ -1,9 +1,9 @@
 import random
 
-QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
-
 MIN_NUMBER = 1
 MAX_NUMBER = 100
+
+QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def game_even():
