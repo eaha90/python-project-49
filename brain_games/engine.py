@@ -18,7 +18,7 @@ GAMES = {
 }
 
 
-def run_game(game_name):
+def run_game(game):
     game, question = GAMES[game_name]
     name = welcome_user()
     print(question)
