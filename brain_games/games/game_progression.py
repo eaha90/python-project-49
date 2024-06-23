@@ -1,13 +1,12 @@
 import random
 
+
 MIN_LENGTH = 5
 MAX_LENGTH = 10
 MIN_STEP = 1
 MAX_STEP = 5
 MIN_START_NUMBER = 1
 MAX_START_NUMBER = 10
-
-QUESTION = 'What number is missing in the progression?'
 
 
 def generate_progression():
@@ -19,7 +18,7 @@ def generate_progression():
     result = progression[gap_index]
     progression[gap_index] = ".."
     progression_str = ' '.join(str(x) for x in progression)
-    return progression_str, str(result)
+    return progression_str, result
 
 
 def game_progression():

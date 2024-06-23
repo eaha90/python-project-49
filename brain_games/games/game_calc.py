@@ -1,14 +1,14 @@
 import random
-import operator
-
-QUESTION = 'What is the result of the expression?'
 
 
-def game():
-    operations = {'+': operator.add, '-': operator.sub, '*': operator.mul}
-    number1 = random.randint(1, 10)
-    number2 = random.randint(1, 10)
-    operation = random.choice(list(operations.keys()))
-    question = f'{number1} {operation} {number2}'
-    correct_answer = str(operations[operation](number1, number2))    
-    return question, correct_answer
+MIN_NUMBER = 1
+MAX_NUMBER = 10
+
+
+def game_calc():
+    random_int_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    random_int_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    action = random.choice(['*', '+', '-'])
+    operation = ' '.join((str(random_int_1), action, str(random_int_2)))
+    result = int(eval(operation))
+    return operation, result
