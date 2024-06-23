@@ -6,5 +6,5 @@ import brain_games.games.game_even as game_even
 def main():
     run_game(game_even)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()

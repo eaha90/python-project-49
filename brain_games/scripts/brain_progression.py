@@ -6,5 +6,5 @@ import brain_games.games.game_progression as game_progression
 def main():
     run_game(game_progression)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
