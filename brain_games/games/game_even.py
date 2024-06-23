@@ -1,13 +1,24 @@
-import random
-
-MIN_NUMBER = 1
-MAX_NUMBER = 100
-
-QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+from brain_games.cli import welcome_user
+from .game import game
 
 
-def game():
-    random_int = random.randint(MIN_NUMBER, MAX_NUMBER)
-    question = f'{random_int}'
-    correct_answer = 'yes' if random_int % 2 == 0 else 'no'
-    return question, correct_answer
+def main():
+    print('Welcome to the Brain Games!')
+    print(QUESTION)
+    name = welcome_user()
+    score = 0
+
+    while score < 3:
+        question, correct_answer = game()
+        print(f'Question: {question}')
+        user_answer = input('Your answer: ')
+        if user_answer == correct_answer:
+            print('Correct!')
+            score += 1
+        else:
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}!")
+            break
+
+    if score == 3:
+        print(f'Congratulations, {name}!')
