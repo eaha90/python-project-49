@@ -1,15 +1,18 @@
 import prompt
 from brain_games.cli import welcome_user
+import importlib
+
+MAX_ROUNDS = 3
 
 
-def run_game(game, question):
+def run_game(game_module_name):
+    game_module = importlib.import_module(game_module_name)
     name = welcome_user()
-    print(question)
+    print(game_module.QUESTION)
     count = 0
-    MAX_ROUNDS = 3
 
     while count < MAX_ROUNDS:
-        question, correct_answer = game()
+        question, correct_answer = game_module.game()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if str(user_answer) == str(correct_answer):
