@@ -25,8 +25,10 @@
     5. make brain-prime - Определение простого числа
 
 Демо игр:
+
+asciinema rec demo.cast --overwrite
         
-        https://asciinema.org/a/drqYRKlXus389QsBrJhRsxnWe 
+        <script src="https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw.js" id="asciicast-         QYyyOZiTaDzDR8UJWPp0XdJVw" async="true"></script>
         
         https://asciinema.org/a/oDpnYtHT7ciIZvlHK8aOlY1EV
         
