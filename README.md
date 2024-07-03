@@ -26,9 +26,8 @@
 
 Демо игр:
 
-asciinema rec demo.cast --overwrite
         
-        <script src="https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw.js" id="asciicast-         QYyyOZiTaDzDR8UJWPp0XdJVw" async="true"></script>
+        [![asciicast](https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw.svg)](https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw)
         
         https://asciinema.org/a/oDpnYtHT7ciIZvlHK8aOlY1EV
         
