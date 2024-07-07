@@ -25,9 +25,8 @@
     5. make brain-prime - Определение простого числа
 
 Демо игр:
-
         
-        [![asciicast](https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw.svg)](https://asciinema.org/a/QYyyOZiTaDzDR8UJWPp0XdJVw)
+        https://asciinema.org/a/drqYRKlXus389QsBrJhRsxnWe 
         
         https://asciinema.org/a/oDpnYtHT7ciIZvlHK8aOlY1EV
         
