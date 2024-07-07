@@ -7,7 +7,6 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def get_question_and_answer():
     number = random.randint(1, 100)
 
-
     def is_prime(number):
         if number == 1:
             return False
