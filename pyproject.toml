@@ -1,11 +1,11 @@
 [tool.poetry]
-packages = [
-  { include = "brain_games" },
-]
 name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["VS <gpt271@gmail.com>"]
+packages = [
+  { include = "brain_games" },
+]
 readme = "README.md"
 
 [tool.poetry.dependencies]
