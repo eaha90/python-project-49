@@ -1,4 +1,8 @@
 ### Hexlet tests and linter status:
+[![Actions Status](https://github.com/eaha90/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/eaha90/python-project-49/actions)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/86f36ebddad41482df90/maintainability)](https://codeclimate.com/github/eaha90/python-project-49/maintainability)
+
 
 Описание
 
@@ -18,11 +22,11 @@
     
 Игры можно запускать из командной строки следующими командами:
     
-    1. make brain-even - Определение четного числа
-    2. make brain-calc - Калькулятор. Арифметические выражения, которые необходимо вычислить
-    3. make brain-gcd - Определение НОД
-    4. make brain-progression - Прогрессия. Поиск пропущенных чисел в последовательности чисел
-    5. make brain-prime - Определение простого числа
+    1. brain-even - Определение четного числа
+    2. brain-calc - Калькулятор. Арифметические выражения, которые необходимо вычислить
+    3. brain-gcd - Определение НОД
+    4. brain-progression - Прогрессия. Поиск пропущенных чисел в последовательности чисел
+    5. brain-prime - Определение простого числа
 
 Демо игр:
         
