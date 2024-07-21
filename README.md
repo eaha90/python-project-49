@@ -31,5 +31,5 @@
 
 Демо игр:
         
-    [![asciicast](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55.svg)](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55) 
+    [![asciicast](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55.svg)](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55)
         
