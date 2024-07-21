@@ -30,5 +30,5 @@
 
 Демо игр:
         
-    <script src="https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55.js" id="asciicast-WyNiOPgFUNhr2aT2iTFEo2P55" async="true"></script> 
+    [![asciicast](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55.svg)](https://asciinema.org/a/WyNiOPgFUNhr2aT2iTFEo2P55) 
         
